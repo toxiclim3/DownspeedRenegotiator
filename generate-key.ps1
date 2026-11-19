@@ -71,7 +71,7 @@ if (-not [string]::IsNullOrEmpty($keyDir)) {
 
 $psi = New-Object System.Diagnostics.ProcessStartInfo
 $psi.FileName = $sshKeygen
-$psi.Arguments = "-q -t ed25519 -C `"downspeed-renegotiator`" -N `"`" -f `"$KeyPath`""
+$psi.Arguments = "-q -t ed25519 -C `"downswitch-renegotiator`" -N `"`" -f `"$KeyPath`""
 $psi.UseShellExecute = $false
 $psi.CreateNoWindow = $true
 $psi.RedirectStandardInput = $true

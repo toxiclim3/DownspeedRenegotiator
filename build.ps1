@@ -5,11 +5,11 @@ if (!(Test-Path $csc)) {
 }
 Push-Location $PSScriptRoot
 try {
-    & $csc /nologo /target:winexe /optimize+ /out:DownspeedRenegotiator.exe /r:System.dll /r:System.Drawing.dll /r:System.Windows.Forms.dll src\Program.cs
+    & $csc /nologo /target:winexe /optimize+ /out:DownswitchRenegotiator.exe /r:System.dll /r:System.Drawing.dll /r:System.Windows.Forms.dll src\Program.cs
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE
     }
-    Write-Host "Built DownspeedRenegotiator.exe"
+    Write-Host "Built DownswitchRenegotiator.exe"
 }
 finally {
     Pop-Location

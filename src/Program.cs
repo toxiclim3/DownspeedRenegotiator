@@ -14,7 +14,7 @@ using System.Threading;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
-namespace DownspeedRenegotiator
+namespace DownswitchRenegotiator
 {
     internal enum LinkState
     {
@@ -784,7 +784,7 @@ namespace DownspeedRenegotiator
     internal static class AutorunHelper
     {
         private const string RunKeyPath = "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
-        private const string ValueName = "DownspeedRenegotiator";
+        private const string ValueName = "DownswitchRenegotiator";
 
         public static bool IsEnabled()
         {
@@ -1882,22 +1882,22 @@ namespace DownspeedRenegotiator
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "DownspeedRenegotiator", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "DownswitchRenegotiator", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 1;
             }
 
             if (guiCreatedFromDefault)
             {
                 MessageBox.Show(
-                    "Created config.ini from default_config.ini:\n" + appCfg.ConfigPath + "\n\nEdit it with your router settings, then start DownspeedRenegotiator again.",
-                    "DownspeedRenegotiator",
+                    "Created config.ini from default_config.ini:\n" + appCfg.ConfigPath + "\n\nEdit it with your router settings, then start DownswitchRenegotiator again.",
+                    "DownswitchRenegotiator",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 return 0;
             }
 
             bool createdNew;
-            Mutex mutex = new Mutex(true, "Local\\DownspeedRenegotiator", out createdNew);
+            Mutex mutex = new Mutex(true, "Local\\DownswitchRenegotiator", out createdNew);
             if (!createdNew)
             {
                 mutex.Dispose();

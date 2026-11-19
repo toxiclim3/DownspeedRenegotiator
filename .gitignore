@@ -1,0 +1,24 @@
+# SSH keys and host state
+ssh/
+id_ed25519
+id_ed25519.pub
+known_hosts
+*.pem
+*.key
+
+# Local config
+config.ini
+
+# Build outputs
+*.exe
+*.pdb
+bin/
+obj/
+
+# IDE and OS files
+.vs/
+.vscode/
+*.user
+Thumbs.db
+Desktop.ini
+.DS_Store

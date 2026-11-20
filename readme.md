@@ -1,5 +1,5 @@
 # DownswitchRenegotiator
-### A Windows tray utility for when your router switches from gigabit on the WAN port to 100 Mbps for no clear reason
+A Windows tray utility for when your router switches from gigabit on the WAN port to 100 Mbps for no clear reason
 
 ## Note: This project was vibecoded.
 
